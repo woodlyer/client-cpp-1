@@ -57,7 +57,7 @@ namespace virtru::network {
             }
 
             // Not everything throws an errorCode
-            if ((!errorCode) && (status != kHTTPOk)) {
+            if ((!errorCode) && (status != kHTTPOk) && (status != kHTTPOkPartial)) {
                 std::ostringstream oss;
                 oss << "status: " << status << " " << responseBody;
                 LogDebug(oss.str());
